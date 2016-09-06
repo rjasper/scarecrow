@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+
+#if UNITY_EDITOR
+
 using UnityEditor;
 
 [CustomEditor(typeof(MovementPlayer))]
@@ -16,3 +19,5 @@ public class MovementPlayerEditor : Editor
     }
 
 }
+
+#endif
