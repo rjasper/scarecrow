@@ -23,9 +23,10 @@ GameObject:
   - 61: {fileID: 61000011027223750}
   - 50: {fileID: 50000012554392058}
   - 114: {fileID: 114000013830139558}
+  - 114: {fileID: 114000013370048930}
   m_Layer: 0
-  m_Name: Enemy_RED
-  m_TagString: Untagged
+  m_Name: Enemy_Red
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,6 +75,18 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!114 &114000013370048930
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011797938024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1386019997767554d9fa4d9593cda03b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorState: red
 --- !u!114 &114000013830139558
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -117,6 +130,6 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: dd9c2eb5575581a4d9d0e57014057e13, type: 3}
-  m_Color: {r: 0.7205882, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.6156863, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0

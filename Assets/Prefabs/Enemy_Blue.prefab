@@ -23,9 +23,10 @@ GameObject:
   - 61: {fileID: 61000012896188280}
   - 50: {fileID: 50000014214905022}
   - 114: {fileID: 114000013316966814}
+  - 114: {fileID: 114000011457707546}
   m_Layer: 0
   m_Name: Enemy_Blue
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,6 +75,18 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!114 &114000011457707546
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010502613800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1386019997767554d9fa4d9593cda03b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorState: blue
 --- !u!114 &114000013316966814
 MonoBehaviour:
   m_ObjectHideFlags: 1
