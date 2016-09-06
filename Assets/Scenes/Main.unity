@@ -101,6 +101,7 @@ GameObject:
   - 212: {fileID: 426702031}
   - 61: {fileID: 426702030}
   - 50: {fileID: 426702029}
+  - 114: {fileID: 426702033}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -180,11 +181,24 @@ Transform:
   m_GameObject: {fileID: 426702028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.5, y: -9.1, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!114 &426702033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 426702028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5583165a22be45045b2a45239093f7c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 2018646962}
+  speed: 1
 --- !u!1001 &494185707
 Prefab:
   m_ObjectHideFlags: 0
@@ -380,3 +394,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!1 &2018646962 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000010202693312, guid: aa21a10ad6b24ab4ca21cd815d6ac95e,
+    type: 2}
+  m_PrefabInternal: {fileID: 494185707}
