@@ -25,7 +25,7 @@ GameObject:
   - 114: {fileID: 114000011629319966}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -85,6 +85,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72b608d93a2749f42a993e9bd0d2650c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputSpeedFactor: 2
+  minimumSqrInput: 0.010000001
 --- !u!212 &212000011896178100
 SpriteRenderer:
   m_ObjectHideFlags: 1
