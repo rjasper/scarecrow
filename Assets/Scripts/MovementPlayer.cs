@@ -3,32 +3,38 @@ using System.Collections;
 
 public class MovementPlayer : MonoBehaviour {
 
+    public float inputSpeedFactor = 1f;
+
+    public float minimumSqrInput = Mathf.Pow(.1f, 2f);
+
+    public float minimumInput
+    {
+        get { return Mathf.Sqrt(minimumSqrInput); }
+        set { minimumSqrInput = Mathf.Pow(value, 2f); }
+    }
+
+    private new Rigidbody2D rigidbody;
 	
 	void Start () {
-	
+        rigidbody = GetComponent<Rigidbody2D>();
 	}
-	//using arrow buttons or WASD for player character movements
-	void Update () {
-        Transform t = GetComponent<Transform>();
 
-        if ((Input.GetKeyDown("right")) || (Input.GetKeyDown(KeyCode.D)))
-        {
-            t.Translate (new Vector2(1, 0));
-        }
-
-        if ((Input.GetKeyDown("left")) || (Input.GetKeyDown(KeyCode.A)))
-                {
-            t.Translate (new Vector2(-1, 0));
-        }
-
-        if ((Input.GetKeyDown("up")) || (Input.GetKeyDown(KeyCode.W)))
-        {
-            t.Translate(new Vector2(0, 1));
-        }
-
-        if ((Input.GetKeyDown("down")) || (Input.GetKeyDown(KeyCode.S)))
-        {
-            t.Translate(new Vector2(0, -1));
-        }
+    void FixedUpdate()
+    {
+        UpdateMovement();
     }
+    
+    private void UpdateMovement()
+    {
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+
+        Vector2 inputVector = new Vector2(horizontalInput, verticalInput);
+
+        if (inputVector.SqrMagnitude() < minimumSqrInput)
+            rigidbody.velocity = Vector2.zero;
+        else
+            rigidbody.velocity = inputSpeedFactor * inputVector.normalized;
+    }
+
 }
