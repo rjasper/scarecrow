@@ -5,8 +5,6 @@ public class MovementPlayer : MonoBehaviour {
 
     public float inputSpeedFactor = 1f;
 
-    public float minimumSqrInput = Mathf.Pow(.1f, 2f);
-
     public float minimumInput
     {
         get { return Mathf.Sqrt(minimumSqrInput); }
@@ -14,8 +12,10 @@ public class MovementPlayer : MonoBehaviour {
     }
 
     private new Rigidbody2D rigidbody;
-	
-	void Start () {
+
+    private float minimumSqrInput = Mathf.Pow(.1f, 2f);
+
+    void Start () {
         rigidbody = GetComponent<Rigidbody2D>();
 	}
 
