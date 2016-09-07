@@ -9,9 +9,7 @@ public class PlayerEnemyCollision : MonoBehaviour {
 
         if (other.CompareTag("Enemy"))
         {
-            Debug.Log("Enemy Contact");
-
-            // TODO trigger player death
+            gameObject.SetActive(false);
         }
     }
 
