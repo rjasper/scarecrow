@@ -415,7 +415,7 @@ GameObject:
   - 114: {fileID: 426702033}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -645,6 +645,21 @@ Prefab:
         type: 2}
       propertyPath: m_SortingLayerID
       value: 741398307
+      objectReference: {fileID: 0}
+    - target: {fileID: 61000013263414084, guid: aa21a10ad6b24ab4ca21cd815d6ac95e,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61000013263414084, guid: aa21a10ad6b24ab4ca21cd815d6ac95e,
+        type: 2}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61000013263414084, guid: aa21a10ad6b24ab4ca21cd815d6ac95e,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aa21a10ad6b24ab4ca21cd815d6ac95e, type: 2}
