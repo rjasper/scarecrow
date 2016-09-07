@@ -9,14 +9,14 @@ using UnityEditor;
 public class MovementPlayerEditor : Editor
 {
 
-    public override void OnInspectorGUI()
-    {
-        base.OnInspectorGUI();
+	public override void OnInspectorGUI()
+	{
+		base.OnInspectorGUI();
 
-        MovementPlayer movementPlayer = (MovementPlayer)target;
+		MovementPlayer movementPlayer = (MovementPlayer)target;
 
-        movementPlayer.minimumInput = EditorGUILayout.FloatField("Minimum Input", movementPlayer.minimumInput);
-    }
+		movementPlayer.minimumInput = EditorGUILayout.FloatField("Minimum Input", movementPlayer.minimumInput);
+	}
 
 }
 

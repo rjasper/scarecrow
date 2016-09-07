@@ -3,14 +3,14 @@ using System.Collections;
 
 public class PlayerEnemyCollision : MonoBehaviour {
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        Collider2D other = collision.collider;
+	void OnCollisionEnter2D(Collision2D collision)
+	{
+		Collider2D other = collision.collider;
 
-        if (other.CompareTag("Enemy"))
-        {
-            gameObject.SetActive(false);
-        }
-    }
+		if (other.CompareTag("Enemy"))
+		{
+			gameObject.SetActive(false);
+		}
+	}
 
 }
