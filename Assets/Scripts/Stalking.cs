@@ -7,14 +7,17 @@ public class Stalking : MonoBehaviour {
 	private Rigidbody2D rb;
 
 	void Start () {
-		rb = GetComponent<Rigidbody2D>();
+		rb = GetComponentInParent<Rigidbody2D>();
 	}
 	
 	// search and get near the position of player character
-	void FixedUpdate () {
-		Transform t = GetComponent<Transform>();
-		Vector2 direction = player.transform.position - t.position;
+	void OnCollisionStay2D (Collision2D coll) {
+		if (coll.gameObject.tag == "Enemy")
+		{
+			Transform t = GetComponentInParent<Transform>();
+			Vector2 direction = player.transform.position - t.position;
 
-		rb.velocity = speed * direction.normalized;
+			rb.velocity = speed * direction.normalized;
+		}
 	}
 }
