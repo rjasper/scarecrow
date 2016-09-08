@@ -21,6 +21,7 @@ GameObject:
   - 4: {fileID: 4000013605914244}
   - 212: {fileID: 212000010033959170}
   - 61: {fileID: 61000011841795222}
+  - 114: {fileID: 114000010796438722}
   m_Layer: 0
   m_Name: Goal
   m_TagString: Goal
@@ -55,6 +56,18 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!114 &114000010796438722
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013914078930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1386019997767554d9fa4d9593cda03b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorState: red
 --- !u!212 &212000010033959170
 SpriteRenderer:
   m_ObjectHideFlags: 1
