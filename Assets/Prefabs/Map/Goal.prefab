@@ -22,6 +22,7 @@ GameObject:
   - 212: {fileID: 212000010033959170}
   - 61: {fileID: 61000011841795222}
   - 114: {fileID: 114000010796438722}
+  - 114: {fileID: 114000012633871386}
   m_Layer: 0
   m_Name: Goal
   m_TagString: Goal
@@ -68,6 +69,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorState: red
+--- !u!114 &114000012633871386
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013914078930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0482864e6ff0f142ae58191d1b5aa37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212000010033959170
 SpriteRenderer:
   m_ObjectHideFlags: 1
