@@ -16,17 +16,17 @@ public class MovementPlayer : MonoBehaviour {
 		UpdateMovement();
 	}
 
-    private void UpdateMovement()
-    {
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
+	private void UpdateMovement()
+	{
+		float horizontalInput = Input.GetAxis("Horizontal");
+		float verticalInput = Input.GetAxis("Vertical");
 
-        Vector2 inputVector = new Vector2(horizontalInput, verticalInput);
-        
-        if (inputVector.sqrMagnitude > 1)
-            inputVector.Normalize();
+		Vector2 inputVector = new Vector2(horizontalInput, verticalInput);
+		
+		if (inputVector.sqrMagnitude > 1)
+			inputVector.Normalize();
 
-        rigidbody.velocity = inputSpeedFactor * inputVector;
-    }
+		rigidbody.velocity = inputSpeedFactor * inputVector;
+	}
 
 }

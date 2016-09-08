@@ -3,6 +3,6 @@ using System.Collections;
 
 public class ColorState : MonoBehaviour {
 
-    public string colorState = "red";
+	public string colorState = "red";
 
 }
