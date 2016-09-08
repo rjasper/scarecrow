@@ -5,15 +5,7 @@ public class MovementPlayer : MonoBehaviour {
 
 	public float inputSpeedFactor = 1f;
 
-	public float minimumInput
-	{
-		get { return Mathf.Sqrt(minimumSqrInput); }
-		set { minimumSqrInput = Mathf.Pow(value, 2f); }
-	}
-
 	private new Rigidbody2D rigidbody;
-
-	private float minimumSqrInput = Mathf.Pow(.1f, 2f);
 
 	void Start () {
 		rigidbody = GetComponent<Rigidbody2D>();
@@ -23,18 +15,18 @@ public class MovementPlayer : MonoBehaviour {
 	{
 		UpdateMovement();
 	}
-	
-	private void UpdateMovement()
-	{
-		float horizontalInput = Input.GetAxis("Horizontal");
-		float verticalInput = Input.GetAxis("Vertical");
 
-		Vector2 inputVector = new Vector2(horizontalInput, verticalInput);
+    private void UpdateMovement()
+    {
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
 
-		if (inputVector.SqrMagnitude() < minimumSqrInput)
-			rigidbody.velocity = Vector2.zero;
-		else
-			rigidbody.velocity = inputSpeedFactor * inputVector.normalized;
-	}
+        Vector2 inputVector = new Vector2(horizontalInput, verticalInput);
+        
+        if (inputVector.sqrMagnitude > 1)
+            inputVector.Normalize();
+
+        rigidbody.velocity = inputSpeedFactor * inputVector;
+    }
 
 }
