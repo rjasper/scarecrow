@@ -3,11 +3,11 @@ using System.Collections;
 
 public class PlayerEnemyCollision : MonoBehaviour {
 
-	private EventManager eventManager;
+	private EventController eventManager;
 
 	void Awake()
 	{
-		eventManager = EventManager.instance;
+		eventManager = EventController.instance;
 	}
 
 	void OnCollisionEnter2D(Collision2D collision)

@@ -3,18 +3,18 @@ using System.Collections;
 
 public class SwitchPlayerTrigger : MonoBehaviour {
 
-	private EventManager eventManager;
+	private EventController eventManager;
 
-	void Awake()
+	void Start()
 	{
-		eventManager = EventManager.instance;
+		eventManager = EventController.instance;
 	}
 
 	void OnTriggerEnter2D(Collider2D collider)
 	{
 		if (collider.CompareTag("Player") && !collider.isTrigger)
 		{
-			eventManager.OnPlayerSwitchCollision(gameObject);
+			eventManager.OnPlayerSwitchTrigger(gameObject);
 		}
 	}
 

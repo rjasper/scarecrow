@@ -1,19 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GoalEnemyTrigger : MonoBehaviour {
+public class GoalEnemyTrigger : MonoBehaviour
+{
 
-	private ColorState colorState;
+	private EventController eventManager;
 
-	void Start () {
-		colorState = GetComponent<ColorState>();
+	void Start()
+	{
+		eventManager = EventController.instance;
 	}
 
 	void OnTriggerEnter2D(Collider2D collider)
 	{
 		if (collider.CompareTag("Enemy") && !collider.isTrigger)
 		{
-			Debug.Log("enemy triggered goal");
+			eventManager.OnGoalEnemyTrigger(gameObject, collider.gameObject);
 		}
 	}
 
