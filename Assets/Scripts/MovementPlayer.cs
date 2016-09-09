@@ -3,7 +3,7 @@ using System.Collections;
 
 public class MovementPlayer : MonoBehaviour {
 
-	float inputSpeedFactor = 1f;
+	public float inputSpeedFactor = 1f;
 
 	private new Rigidbody2D rigidbody;
 
