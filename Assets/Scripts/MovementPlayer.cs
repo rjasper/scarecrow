@@ -3,11 +3,15 @@ using System.Collections;
 
 public class MovementPlayer : MonoBehaviour {
 
-	public float inputSpeedFactor = 1f;
+	GameObject gameManager;
+	float inputSpeedFactor = gameManager.GetComponent<GameManager>().GetComponent<playerInputSpeedFactor>();
 
 	private new Rigidbody2D rigidbody;
 
 	void Start () {
+
+		gameManager = GameObject.Find("GameManager");
+		
 		rigidbody = GetComponent<Rigidbody2D>();
 	}
 
