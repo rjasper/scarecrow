@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Stalking : MonoBehaviour
 {
+
 	public GameObject player;
 	public float speed = 1f;
 	private Rigidbody2D rb;

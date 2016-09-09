@@ -3,18 +3,33 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour {
 
-	private static GameManager instance =null;
-	public static GameManager Instance;
+	private static GameManager instanceHolder = null;
 
-	//Player parameters
-	public float playerInputSpeedFactor = 1f;
+	public static GameManager instance
+	{
+		get { return instanceHolder; }
+	}
+
+	void Awake ()
+	{
+		InitInstanceOrDestroy();
+	}
+
+	private void InitInstanceOrDestroy ()
+	{
+		if (instanceHolder == null)
+			instanceHolder = this;
+		else
+			Destroy(this);
+	}
 
 	void Start () {
-	
+
 	}
 	
 
 	void Update () {
 	
 	}
+
 }

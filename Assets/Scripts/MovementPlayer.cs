@@ -3,8 +3,7 @@ using System.Collections;
 
 public class MovementPlayer : MonoBehaviour {
 
-	GameObject gameManager;
-	float inputSpeedFactor = gameManager.GetComponent<GameManager>().GetComponent<playerInputSpeedFactor>();
+	float inputSpeedFactor = 1f;
 
 	private new Rigidbody2D rigidbody;
 
