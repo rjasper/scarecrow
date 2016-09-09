@@ -19,4 +19,9 @@ public class EventManager : MonoBehaviour {
 		player.SetActive(false);
 	}
 
+	public void OnPlayerSwitchCollision(GameObject switchInstance)
+	{
+		Debug.Log("player triggered switch");
+	}
+
 }
