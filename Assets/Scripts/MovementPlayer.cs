@@ -8,9 +8,6 @@ public class MovementPlayer : MonoBehaviour {
 	private new Rigidbody2D rigidbody;
 
 	void Start () {
-
-		gameManager = GameObject.Find("GameManager");
-		
 		rigidbody = GetComponent<Rigidbody2D>();
 	}
 
