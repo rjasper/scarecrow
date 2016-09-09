@@ -22,6 +22,7 @@ GameObject:
   - 212: {fileID: 212000013506466710}
   - 61: {fileID: 61000010650585988}
   - 114: {fileID: 114000011389241230}
+  - 114: {fileID: 114000014173416704}
   m_Layer: 0
   m_Name: SwitchBlue
   m_TagString: Untagged
@@ -68,6 +69,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorState: blue
+--- !u!114 &114000014173416704
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010600507922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f76b0d18475aa4a4aad6b5b451b79e01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212000013506466710
 SpriteRenderer:
   m_ObjectHideFlags: 1

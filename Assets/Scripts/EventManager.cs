@@ -3,11 +3,18 @@ using System.Collections;
 
 public class EventManager : MonoBehaviour {
 
-	GameObject player;
+	private GameController gameController;
+
+	private GameObject player;
 
 	public static EventManager instance
 	{
-		get { return GameObject.FindGameObjectWithTag("EventManager").GetComponent<EventManager>(); }
+		get { return GameObject.FindObjectOfType<EventManager>(); }
+	}
+
+	void Awake ()
+	{
+		gameController = GameController.instance;
 	}
 	
 	void Start () {
@@ -21,7 +28,8 @@ public class EventManager : MonoBehaviour {
 
 	public void OnPlayerSwitchCollision(GameObject switchInstance)
 	{
-		Debug.Log("player triggered switch");
+		ColorState color = switchInstance.GetComponent<ColorState>();
+		gameController.SetGoalColor(color);
 	}
 
 }

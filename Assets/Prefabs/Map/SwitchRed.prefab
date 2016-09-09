@@ -22,6 +22,7 @@ GameObject:
   - 212: {fileID: 212000012234507060}
   - 61: {fileID: 61000010432640750}
   - 114: {fileID: 114000011454388464}
+  - 114: {fileID: 114000010561914560}
   m_Layer: 0
   m_Name: SwitchRed
   m_TagString: Untagged
@@ -56,6 +57,17 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!114 &114000010561914560
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011415368762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f76b0d18475aa4a4aad6b5b451b79e01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000011454388464
 MonoBehaviour:
   m_ObjectHideFlags: 1
